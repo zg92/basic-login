@@ -1,4 +1,4 @@
-from login_form import app, db 
+from login_form import db 
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -6,6 +6,5 @@ class User(db.Model):
     password = db.Column(db.String(50), unique=True, nullable=False)
 
     def __repr__(self):
-        return f'username = {User.username}, password = {User.password}'
+        return f'username = {self.username}, password = {self.password}'
 
-db.create_all()
