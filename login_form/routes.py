@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, flash
 from login_form import app
-from models import User
-from forms import LoginForm, RegisterForm
+from login_form.models import User
+from login_form.forms import LoginForm, RegisterForm
 
 @app.route('/', methods=['GET','POST'])
 def login():
@@ -24,4 +24,4 @@ def login():
                 print(User.query.all())
             else:
                 print('Please make sure your passwords match!')
-    return render_template('login_form/templates/index.html', login_form = login_form, registered_form = register_form)
+    return render_template('index.html', login_form = login_form, registered_form = register_form)
