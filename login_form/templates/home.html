@@ -3,19 +3,22 @@
 {% block content %}
 <div class="page-wrapper">
 
-<div class="page-selector">
-    <div class="login-screen">Logout</div>
-</div>
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-<!-- <ul class=flashes> -->
-    {% for message in messages %}
-    <li>{{ message }}</li>
-    {% endfor %}
-<!-- </ul> -->
-{% endif %}
-{% endwith %}
-
+    <div class="page-selector">
+        <div class="login-screen">Welcome</div>
     </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flash_message>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <form action="{{ url_for('logout') }}">
+        <button id="logout-button">Logout</button>
+    </form>
+</div>
 
 {% endblock %}

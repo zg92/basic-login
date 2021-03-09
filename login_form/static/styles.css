@@ -44,6 +44,13 @@ body {
     display: none;
 }
 
+.flash_message{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 15%;
+}
+
 #login {
     display: flex;
     flex-direction: column;
@@ -95,5 +102,18 @@ body {
     font-size: 1.25rem;
     width: 30%;
     margin-top: 5%;
-    background: seagreen;
+    background: darkgreen;
+}
+
+#logout-button {
+    padding: 2%;
+    font-size: 1.25rem;
+    background-color: darkgreen;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    position: relative;
+    cursor: pointer;
 }

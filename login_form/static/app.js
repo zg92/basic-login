@@ -9,11 +9,15 @@ let currentPage = 'login';
 
 loginPage.addEventListener('click', () => {
     currentPage = 'login';
+    registerPage.style.color = 'black';
+    loginPage.style.color = 'rgb(38, 39, 38)';
     screenSwitch()
 });
 
 registerPage.addEventListener('click', () => {
     currentPage = 'register';
+    loginPage.style.color = 'black'
+    registerPage.style.color = 'rgb(38, 39, 38)';
     screenSwitch()
 });
 
@@ -21,7 +25,6 @@ function screenSwitch() {
     if (currentPage == 'login') {
         loginMenu.classList.toggle('active');
         registerMenu.classList.toggle('active');
-        
     }
 
     if (currentPage == 'register') {
