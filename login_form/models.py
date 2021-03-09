@@ -12,6 +12,3 @@ class User(db.Model, UserMixin):
 
     def __repr__(self):
         return f'username = {self.username}, password = {self.password}'
-
-# db.drop_all()
-# db.create_all()
